@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Quicksand&family=Raleway:wght@300;400;500;600;700;800;900&family=Roboto&display=swap');
+
+*{
+    font-family: 'Josefin Sans', sans-serif;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+img{
+    max-width: 100%;
+}
+
+
+/* nav styles **************************/
+
+nav{
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    -moz-box-shadow: 0px 0px 8px #000;
+    -webkit-box-shadow: 0px 0px 8px #000;
+    box-shadow-bottom: 0px 0px 8px #000;
+}
+@media (max-width: 860px){
+    #nav-right{
+        display: none;
+    }
+
+}
+
+#nav-left{
+    flex: 50%;
+}
+#nav-right{
+    flex: 50%;
+    text-align: right;
+}
+nav a {
+    display: inline-block;
+    padding: 4px 8px;
+}
+nav a:link,
+nav a:active,
+nav a:visited {
+    color: #000;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #000;
+    text-decoration: none;
+    color: chocolate;
+}
+
+
+/* hero styles **************************/
+
+main{
+    background-color: rgb(47, 44, 41);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+         "header header"
+         "home home-image" 
+         "menu-image menu"
+         "drinks drinks-image"
+         "gallery gallery";
+    column-gap: 0;
+    row-gap: 0;
+    padding: 45px 0;
+}
+
+@media (max-width: 860px){
+    main{
+        grid-template-areas: 
+        "header header"
+        "home home"
+        "home-image home-image" 
+        "menu menu"
+        "menu-image menu-image"
+        "drinks drinks"
+        "drinks-image drinks-image"
+        "gallery gallery";
+    }
+}
+
+
+
+h2{
+    font-size: 40px;
+    color: #ccc;
+}
+
+h3{
+    color: chocolate;
+}
+
+p{
+    font-size: 12px;
+    color: #ccc;
+}
+
+p1{
+    font-style: italic;
+    text-align: left;
+    color: #ccc;
+}
+p2{
+    color: #ccc;
+}
+p4{
+    font-style: italic;
+    color: #ccc;
+}
+
+section{
+    padding: 30px;
+    text-align: center;
+}
+
+header{
+    grid-area: header;
+    height: 50vh;
+    background-image: url("images/nav.jpg");
+    background-size: cover;
+}
+
+#home{
+    padding: 65px;
+    grid-area: home;
+   
+}
+#home-image{
+    grid-area: home-image;
+}
+#logo{
+    width: 145px;
+    height: auto;
+    align-items: center;
+    margin: auto;
+}
+#menu{
+    grid-area: menu;
+    padding: 65px;
+}
+#menu-image{
+    grid-area: menu-image;
+}
+
+#drinks{
+    grid-area: drinks;
+    padding: 65px;
+}
+#drinks-image{
+    grid-area: drinks-image;
+}
+
+#gallery{
+    grid-area: gallery;
+    align-items: center;
+}
+
+
+
+#gallery-container img{
+    display: inline-block;
+    flex: 25%;
+    margin: 10px;
+    max-width: 25%;
+}
+
+@media (max-width: 860px){
+    #gallery-container img{
+          display: inline-block;
+          flex: 25%;
+          margin: 10px;
+          max-width: 35%;
+}
+
+}
+
+
+/* footer styles */
+
+footer{
+    text-align: center;
+    background-color: rgb(47, 44, 41);
+    color: #ccc;
+    padding: 65px;
+}
+
+
+footer section{
+    text-align: center;
+}
+
+
+
+#contact{
+    border: none;
+    padding: 45px;
+}
+
+/* form styles **************************/
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid grey;
+    padding: 5px 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+/* table styles **************************/
+
+table {
+    background-color: rgb(47, 44, 41);
+    border-collapse: collapse;
+    width: 30%;
+    margin: auto;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {background-color: chocolate;}
